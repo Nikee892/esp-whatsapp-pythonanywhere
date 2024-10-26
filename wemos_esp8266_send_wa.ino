@@ -3,8 +3,8 @@
 #include "base64.h"
 
 // Setup WiFi network
-const char* ssid = "xxxxxxxxxxxx";
-const char* password = "xxxxxxxxxx";
+const char* ssid = "Pppp";
+const char* password = "Akustress";
 
 // read sensor
 const int sensorPin = A0;
@@ -12,11 +12,11 @@ int speakerPin = D5;
 int state = 0;
 
 // Twilio Parameter
-String account_sid = "Axxxxxxxxxxxxxxxxxxxxxxxxxx";
-String auth_token = "8xxxxxxxxxxxxxxxxxxxxxxxxxx";
-String from = "14xxxxxxxxx";
-String to = "62xxxxxxxxxxxxxxx";
-String body = "Ada penyusup masuk kerumah mu!";
+String account_sid = "ACc35db4046a778ed970310973db39b9cf";
+String auth_token = "33c34b99d078a8548f1a0174db8f4603";
+String from = "+14155238886";
+String to = "+6285851118001";
+String body = "Ada sesuatu didekat jendela rumah mu!";
 
 void setup() {
  
@@ -48,8 +48,8 @@ void loop() {
      
         int nilai = random(29,37);
         String data = (String) nilai;
-//        String link = "http://jagorobot.pythonanywhere.com/kirimwa?nilai=" + state;
-        String link = "http://jagorobot.pythonanywhere.com/kirimwa?account_sid=" + account_sid + "&auth_token="+ auth_token +"&to_wa=" + to + "&from_wa="+ from +"&body_message=" + body;
+//        String link = "https://github.com/Nikee892/esp-whatsapp-pythonanywhere" + state;
+        String link = "http://Nikee892.pythonanywhere.com/kirimwa?account_sid=" + ACc35db4046a778ed970310973db39b9cf + "&33c34b99d078a8548f1a0174db8f4603="+ 33c34b99d078a8548f1a0174db8f4603 +"&+6285851118001=" + to + "&+14155238886="+ from +"&Ada sesuatu didekat jendela rumah mu!=" + body;
         
         http.begin(link);
         int httpCode = http.GET();
